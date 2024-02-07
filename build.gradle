@@ -2,6 +2,7 @@
 This is the GRADLE build file for LIRE.
  */
 apply plugin: 'java'
+apply plugin: 'java-library'
 apply plugin: 'project-report'
 
 
@@ -19,18 +20,18 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'org.apache.lucene', name: 'lucene-core', version: '8.0.0'
-    compileOnly group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.0.0'
-    compileOnly group: 'org.apache.lucene', name: 'lucene-queryparser', version: '8.0.0'
-    compileOnly group: 'commons-io', name: 'commons-io', version: '2.6'
-    compileOnly group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
+    api group: 'org.apache.lucene', name: 'lucene-core', version: '8.0.0'
+    api group: 'org.apache.lucene', name: 'lucene-analyzers-common', version: '8.0.0'
+    api group: 'org.apache.lucene', name: 'lucene-queryparser', version: '8.0.0'
+    api group: 'commons-io', name: 'commons-io', version: '2.6'
+    api group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
     // https://mvnrepository.com/artifact/commons-codec/commons-codec
-    compileOnly group: 'commons-codec', name: 'commons-codec', version: '1.11'
+    api group: 'commons-codec', name: 'commons-codec', version: '1.11'
     // https://mvnrepository.com/artifact/com.sangupta/jopensurf
-    compileOnly group: 'com.sangupta', name: 'jopensurf', version: '1.0.0'
+    api group: 'com.sangupta', name: 'jopensurf', version: '1.0.0'
     // https://mvnrepository.com/artifact/org.bytedeco.javacpp-presets/opencv
     // compile group: 'org.bytedeco.javacpp-presets', name: 'opencv', version: '2.4.11-0.11'
-    compileOnly fileTree(dir: 'lib', include: '*.jar')
+    api fileTree(dir: 'lib', include: '*.jar')
     runtimeOnly fileTree(dir: 'lib', include: '*.jar')
 
     // ---< Helper files, optional >---
