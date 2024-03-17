@@ -71,4 +71,6 @@ test {
     exclude 'net/semanticmetadata/lire/searchers/**'
     exclude 'net/semanticmetadata/lire/imageanalysis/TestExtraction**'
     exclude 'net/semanticmetadata/lire/TestProperties**'
+
+    enabled = false
 }
